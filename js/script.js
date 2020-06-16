@@ -1,6 +1,6 @@
 function playGame(playerInput) {
 
-	function clearMessages();
+	function clearMessages() {
 
 		let randomNumber = Math.floor(Math.random() * 3 + 1);
 
@@ -10,7 +10,7 @@ function playGame(playerInput) {
 
 		printMessage('Komputer wylosował: ' + computerMove);
 
-		playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+		/*playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
 
 		/*let playerMove = getMoveName(playerInput);*/
 
@@ -44,20 +44,22 @@ function playGame(playerInput) {
 			} else {
 			  printMessage('Przegrywasz!');
 			}
-			}
+	}
+}
+
 		printMessage('Wynik: ');
 		displayResult(computerMove, playerMove);
 	}
  document.getElementById('play-rock').addEventListener('click', function(){
-	printMessage(playGame(1));
+	(playGame(1));
+});
+
+ document.getElementById('play-paper').addEventListener('click', function(){
+	(playGame(2));
 });
 
  document.getElementById('play-scissors').addEventListener('click', function(){
-	printMessage(playGame(2));
-});
-
- document.getElementById('play-scissors').addEventListener('click', function(){
-	printMessage(playGame(3));
+	(playGame(3));
 });
 
 
