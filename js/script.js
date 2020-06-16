@@ -1,6 +1,6 @@
 function playGame(playerInput) {
 
-	function clearMessages() {
+	clearMessages();
 
 		let randomNumber = Math.floor(Math.random() * 3 + 1);
 
@@ -49,7 +49,7 @@ function playGame(playerInput) {
 
 		printMessage('Wynik: ');
 		displayResult(computerMove, playerMove);
-	}
+	
  document.getElementById('play-rock').addEventListener('click', function(){
 	(playGame(1));
 });
