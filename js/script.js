@@ -12,7 +12,7 @@ function playGame(playerInput) {
 
 		/*playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
 
-		/*let playerMove = getMoveName(playerInput);*/
+		let playerMove = getMoveName(playerInput);
 
 		printMessage('Gracz wylosował: ' + playerMove);
 
@@ -45,11 +45,10 @@ function playGame(playerInput) {
 			  printMessage('Przegrywasz!');
 			}
 	}
+	printMessage('Wynik: ');
+	displayResult(computerMove, playerMove);
 }
 
-		printMessage('Wynik: ');
-		displayResult(computerMove, playerMove);
-	
  document.getElementById('play-rock').addEventListener('click', function(){
 	(playGame(1));
 });
