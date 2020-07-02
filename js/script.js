@@ -7,15 +7,7 @@ const playGame = function (playerInput) {
 
 		console.log('Wylosowana liczba to: ' + randomNumber);
 
-		const computerMove = getMoveName(randomNumber);
-
-		printMessage('Komputer wylosował: ' + computerMove);
-
 		/*playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');*/
-
-		const playerMove = getMoveName(playerInput);
-
-		printMessage('Gracz wylosował: ' + playerMove);
 
 		const getMoveName = function (argMoveId){
 		  if (argMoveId == 1){
@@ -46,6 +38,12 @@ const playGame = function (playerInput) {
 			  printMessage('Przegrywasz!');
 			}
 	}
+
+	const computerMove = getMoveName(randomNumber);
+		  playerMove = getMoveName(playerInput);
+	printMessage('Komputer wylosował: ' + computerMove);
+	printMessage('Gracz wylosował: ' + playerMove);
+
 	printMessage('Wynik: ');
 	displayResult(computerMove, playerMove);
 }
